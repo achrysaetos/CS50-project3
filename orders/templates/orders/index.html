@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>Pinnochio’s Pizza & Subs</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    h1 {
+      font-size: 45px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: rgb(32, 32, 32);
+      text-align: center;
+      font-style: bold;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: rgb(32, 32, 32);
+      text-align: center;
+      font-style: italic;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: rgb(32, 32, 32);
+      font-style: bold;
+    }
+
+    h4 {
+      font-size: 150px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: darkred;
+      text-align: center;
+      font-style: bold;
+    }
+
+    h5 {
+      font-size: 150px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: darkgreen;
+      text-align: center;
+      font-style: bold;
+    }
+
+    .jumbotron {
+      background-image: url('https://images6.alphacoders.com/412/412086.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .as {
+      color: white !important;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelector("#priv").onclick = () => {
+        alert("You have no privacy!");
+        return false;
+      };
+      document.querySelector("#term").onclick = () => {
+        alert("There are no terms!");
+        return false;
+      };
+      document.querySelector("#copy").onclick = () => {
+        alert("Descriptions courtesy of Pizza Hut and Subway.");
+        return false;
+      };
+    });
+  </script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">ACHRYSAETOS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'checkout' %}">Cart</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        <a href="{% url 'index' %}" class="btn btn-outline-light text-light" role="button">Log Out</a>
+      </span>
+    </div>
+  </nav>
+
+  <center>
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Pinnochio’s Pizza & Subs</h1>
+        <p class="lead as">Welcome to the best Italian restaurant at Harvard. We're two blocks from the Harvard Square
+          T-stop, on Winthrop street next to the corner of JFK Street. Stop on by!
+        </p>
+        <p>
+          <a href="{% url 'menu' %}" class="btn btn-primary my-2">Order Now!</a>
+        </p>
+      </div>
+    </section>
+  </center>
+  <br><br>
+
+
+
+
+  <div class="container marketing">
+    <div class="row">
+      <div class="col-lg-4">
+        <center>
+          <img src="https://wallpapercave.com/wp/wc1813154.jpg" class="bd-placeholder-img rounded-circle" width="140"
+            height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+            role="img">
+          <h2>Pizzas</h2>
+          <h3>Meat lover's pizza is the perfect game day pizza, packed with pepperoni, Italian sausage, ham, bacon,
+            season pork and beef.
+            Enjoy this freshly prepared pizza for family dinner or a group lunch, including pepperoni, seasoned pork,
+            beef, mushrooms, green bell peppers and red onions.
+          </h3>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </center>
+      </div>
+      <div class="col-lg-4">
+        <center>
+          <img src="https://images8.alphacoders.com/648/648866.jpg" class="bd-placeholder-img rounded-circle"
+            width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+            focusable="false" role="img">
+          <h2>Subs</h2>
+          <h3>The Italian Ciabatta with New Fresh Mozzarella is stepping things up a notch with Genoa Salami,
+            a layer of fresh mozzarella, spinach, tomatoes, onions, banana peppers and balsamic sub sauce, stacked on
+            our premium New Ciabatta bread.
+            Dine in, order out, or ask for delivery!
+          </h3>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </center>
+      </div>
+      <div class="col-lg-4">
+        <center>
+          <img src="https://images8.alphacoders.com/826/826205.jpg" class="bd-placeholder-img rounded-circle"
+            width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+            focusable="false" role="img">
+          <h2>Pasta and Salads</h2>
+          <h3>Grilled chicken breast? Check. Creamy alfredo sauce? Check. Layer of cheese plus a side of breadsticks?
+            Check and double check.
+            Nothing is better than a classic Italian-seasoned meat sauce pasta topped with cheese. Accompanied by an
+            order of breadsticks, this is truly a pasta you can't refuse.
+          </h3>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </center>
+      </div>
+    </div>
+    <br>
+
+
+
+
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Only the best at Pinnochio’s. <span class="text-muted">It’ll blow your
+            mind.</span>
+        </h2>
+        <p class="lead">This gourmet pizza is ideal for easy late night delivery, complete with mozzarella cheese and
+          pepperoni.
+          Your favorite cheese pizza made with classic marinara sauce topped with mozzarella cheese. Order online now,
+          or come join us nearby!
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img src="https://wallpapercave.com/wp/wc1813154.jpg"
+          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
+          xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+          aria-label="Placeholder: 500x500">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">In our new Caprese sandwich, we’re stacking a double layer of our new fresh mozzarella onto
+          Ciabatta bread and topping it with spinach, tomatoes and onions.
+          As a finishing touch, our new basil pesto and balsamic sub sauces are joining the party.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="https://images8.alphacoders.com/648/648866.jpg"
+          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
+          xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+          aria-label="Placeholder: 500x500">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">Stuffed with melted cheese, then finished with a buttery garlic blend and grated parmesan, our
+          famous garlic knots are always a welcome addition to any pizza delivery order.
+          Comes with a cup of our delicious marinara sauce!</p>
+      </div>
+      <div class="col-md-5">
+        <img src="https://images8.alphacoders.com/826/826205.jpg"
+          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"
+          xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+          aria-label="Placeholder: 500x500">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+  </div>
+
+
+
+
+
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2017-2019 Pinnochio’s, Inc. &middot; <a id="priv" href="#">Privacy</a> &middot; <a id="term"
+        href="#">Terms</a> &middot; <a id="copy" href="#">Copyright</a></p>
+  </footer>
+
+</body>
+
+</html>

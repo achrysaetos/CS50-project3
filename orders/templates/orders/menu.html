@@ -1,0 +1,416 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <title>Pinnochio’s Menu</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        h1 {
+            font-size: 45px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: rgb(32, 32, 32);
+            text-align: center;
+            font-style: bold;
+        }
+
+        h2 {
+            font-size: 30px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: rgb(32, 32, 32);
+            text-align: center;
+            font-style: italic;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: rgb(32, 32, 32);
+            font-style: bold;
+        }
+
+        h4 {
+            font-size: 150px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: darkred;
+            text-align: center;
+            font-style: bold;
+        }
+
+        h5 {
+            font-size: 150px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: darkgreen;
+            text-align: center;
+            font-style: bold;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector("#priv").onclick = () => {
+                alert("You have no privacy!");
+                return false;
+            };
+            document.querySelector("#term").onclick = () => {
+                alert("There are no terms!");
+                return false;
+            };
+            document.querySelector("#copy").onclick = () => {
+                alert("Descriptions courtesy of Pizza Hut and Subway.");
+                return false;
+            };
+            let total = 0;
+            let items = [];
+            document.querySelector("#rsp").onclick = () => {
+                total = total + 12.20;
+                items.push(" Regular Small Pizza");
+                localStorage.setItem("food", items);
+                localStorage.setItem("money", total.toFixed(2));
+                document.querySelector('#rsp').innerHTML = "Added to Cart!".bold();
+                alert("Added" + items[items.length - 1] + " to cart. Total is $" + total.toFixed(2) +
+                    ". \nProceed to cart when ready to checkout.");
+            };
+            document.querySelector("#rlp").onclick = () => {
+                total = total + 17.45;
+                items.push(" Regular Large Pizza");
+                localStorage.setItem("food", items);
+                localStorage.setItem("money", total.toFixed(2));
+                document.querySelector('#rlp').innerHTML = "Added to Cart!".bold();
+                alert("Added" + items[items.length - 1] + " to cart. Total is $" + total.toFixed(2) +
+                    ". \nProceed to cart when ready to checkout.");
+            };
+            document.querySelector("#ssp").onclick = () => {
+                total = total + 23.45;
+                items.push(" Sicilian Small Pizza");
+                localStorage.setItem("food", items);
+                localStorage.setItem("money", total.toFixed(2));
+                document.querySelector('#ssp').innerHTML = "Added to Cart!".bold();
+                alert("Added" + items[items.length - 1] + " to cart. Total is $" + total.toFixed(2) +
+                    ". \nProceed to cart when ready to checkout.");
+            };
+            document.querySelector("#slp").onclick = () => {
+                total = total + 37.70;
+                items.push(" Sicilian Large Pizza");
+                localStorage.setItem("food", items);
+                localStorage.setItem("money", total.toFixed(2));
+                document.querySelector('#slp').innerHTML = "Added to Cart!".bold();
+                alert("Added" + items[items.length - 1] + " to cart. Total is $" + total.toFixed(2) +
+                    ". \nProceed to cart when ready to checkout.");
+            };
+            document.querySelector("#ss").onclick = () => {
+                total = total + 6.50;
+                items.push(" Small Sub");
+                localStorage.setItem("food", items);
+                localStorage.setItem("money", total.toFixed(2));
+                document.querySelector('#ss').innerHTML = "Added to Cart!".bold();
+                alert("Added" + items[items.length - 1] + " to cart. Total is $" + total.toFixed(2) +
+                    ". \nProceed to cart when ready to checkout.");
+            };
+            document.querySelector("#ls").onclick = () => {
+                total = total + 7.95;
+                items.push(" Large Sub");
+                localStorage.setItem("food", items);
+                localStorage.setItem("money", total.toFixed(2));
+                document.querySelector('#ls').innerHTML = "Added to Cart!".bold();
+                alert("Added" + items[items.length - 1] + " to cart. Total is $" + total.toFixed(2) +
+                    ". \nProceed to cart when ready to checkout.");
+            };
+            document.querySelector("#p").onclick = () => {
+                total = total + 9.75;
+                items.push(" Pasta");
+                localStorage.setItem("food", items);
+                localStorage.setItem("money", total.toFixed(2));
+                document.querySelector('#p').innerHTML = "Added to Cart!".bold();
+                alert("Added" + items[items.length - 1] + " to cart. Total is $" + total.toFixed(2) +
+                    ". \nProceed to cart when ready to checkout.");
+            };
+            document.querySelector("#s").onclick = () => {
+                total = total + 8.25;
+                items.push(" Salad");
+                localStorage.setItem("food", items);
+                localStorage.setItem("money", total.toFixed(2));
+                document.querySelector('#s').innerHTML = "Added to Cart!".bold();
+                alert("Added" + items[items.length - 1] + " to cart. Total is $" + total.toFixed(2) +
+                    ". \nProceed to cart when ready to checkout.");
+            };
+            document.querySelector("#sdp").onclick = () => {
+                total = total + 45.00;
+                items.push(" Small Dinner Platter");
+                localStorage.setItem("food", items);
+                localStorage.setItem("money", total.toFixed(2));
+                document.querySelector('#sdp').innerHTML = "Added to Cart!".bold();
+                alert("Added" + items[items.length - 1] + " to cart. Total is $" + total.toFixed(2) +
+                    ". \nProceed to cart when ready to checkout.");
+            };
+            document.querySelector("#ldp").onclick = () => {
+                total = total + 70.00;
+                items.push(" Large Dinner Platter");
+                localStorage.setItem("food", items);
+                localStorage.setItem("money", total.toFixed(2));
+                document.querySelector('#ldp').innerHTML = "Added to Cart!".bold();
+                alert("Added" + items[items.length - 1] + " to cart. Total is $" + total.toFixed(2) +
+                    ". \nProceed to cart when ready to checkout.");
+            };
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">ACHRYSAETOS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'checkout' %}">Cart</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                <a href="{% url 'index' %}" class="btn btn-outline-light text-light" role="button">Log Out</a>
+            </span>
+        </div>
+    </nav>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://wallpapercave.com/wp/wc1813154.jpg" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                            role="img" aria-label="Placeholder: Thumbnail">
+                        <h2>Regular Small Pizza</h2>
+                        <div class="card-body">
+                            <p class="card-text">Our regular small pizzas will be the most regular, small pizzas you
+                                will ever eat... or your money back!</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button id="rsp" type="button" class="btn btn-sm btn-outline-secondary">Add to
+                                        Cart</button>
+                                </div>
+                                <small class="text-muted">$12.20</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://wallpapercave.com/wp/wc1813154.jpg" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                            role="img" aria-label="Placeholder: Thumbnail">
+                        <h2>Regular Large Pizza</h2>
+                        <div class="card-body">
+                            <p class="card-text">Our regular large pizzas are so funny they are classified as a joke by
+                                some. We recommend our dinner platters.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button id="rlp" type="button" class="btn btn-sm btn-outline-secondary">Add to
+                                        Cart</button>
+                                </div>
+                                <small class="text-muted">$17.45</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://images6.alphacoders.com/412/412086.jpg" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                            role="img" aria-label="Placeholder: Thumbnail">
+                        <h2>Sicilian Small Pizza</h2>
+                        <div class="card-body">
+                            <p class="card-text">Our Sicilian pizzas are a head scratching wonder. Add up to three
+                                toppings for a wondrous experience!</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button id="ssp" type="button" class="btn btn-sm btn-outline-secondary">Add to
+                                        Cart</button>
+                                </div>
+                                <small class="text-muted">$23.45</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://images6.alphacoders.com/412/412086.jpg" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                            role="img" aria-label="Placeholder: Thumbnail">
+                        <h2>Sicilian Large Pizza</h2>
+                        <div class="card-body">
+                            <p class="card-text">Our Sicilian large pizzas are not much larger than our small pizzas,
+                                which is why we don't have a medium size option.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button id="slp" type="button" class="btn btn-sm btn-outline-secondary">Add to
+                                        Cart</button>
+                                </div>
+                                <small class="text-muted">$37.70</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://images8.alphacoders.com/648/648866.jpg" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                            role="img" aria-label="Placeholder: Thumbnail">
+                        <h2>Small Sub</h2>
+                        <div class="card-body">
+                            <p class="card-text">Our delicious small subs are our large subs cut in half. Add up to
+                                three toppings for a limited time!</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button id="ss" type="button" class="btn btn-sm btn-outline-secondary">Add to
+                                        Cart</button>
+                                </div>
+                                <small class="text-muted">$6.50</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://images8.alphacoders.com/648/648866.jpg" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                            role="img" aria-label="Placeholder: Thumbnail">
+                        <h2>Large Sub</h2>
+                        <div class="card-body">
+                            <p class="card-text">Our delicious large subs are literally made from scratch every morning.
+                                Add up to three toppings for a limited time!</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button id="ls" type="button" class="btn btn-sm btn-outline-secondary">Add to
+                                        Cart</button>
+                                </div>
+                                <small class="text-muted">$7.95</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://images8.alphacoders.com/826/826205.jpg" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                            role="img" aria-label="Placeholder: Thumbnail">
+                        <h2>Pasta</h2>
+                        <div class="card-body">
+                            <p class="card-text">Choose from either Baked Ziti w/Mozzarella, Baked Ziti w/Meatballs, or
+                                Baked Ziti w/Chicken.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button id="p" type="button" class="btn btn-sm btn-outline-secondary">Add to
+                                        Cart</button>
+                                </div>
+                                <small class="text-muted">$9.75</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://images8.alphacoders.com/826/826205.jpg" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                            role="img" aria-label="Placeholder: Thumbnail">
+                        <h2>Salad</h2>
+                        <div class="card-body">
+                            <p class="card-text">Choose from either Garden Salad, Greek Salad, Anitpasto, or Salad
+                                w/Tuna. All $8.25 for a limited time!</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button id="s" type="button" class="btn btn-sm btn-outline-secondary">Add to
+                                        Cart</button>
+                                </div>
+                                <small class="text-muted">$8.25</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://wallpapercave.com/wp/mGD11sD.jpg" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                            role="img" aria-label="Placeholder: Thumbnail">
+                        <h2>Small Dinner Platter</h2>
+                        <div class="card-body">
+                            <p class="card-text">Choose from either Garden Salad, Greek Salad, Antipasto, Baked Ziti,
+                                Meatball Parm, or Chicken Parm.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button id="sdp" type="button" class="btn btn-sm btn-outline-secondary">Add to
+                                        Cart</button>
+                                </div>
+                                <small class="text-muted">$45.00</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="https://wallpapercave.com/wp/mGD11sD.jpg" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                            role="img" aria-label="Placeholder: Thumbnail">
+                        <h2>Large Dinner Platter</h2>
+                        <div class="card-body">
+                            <p class="card-text">Choose from either Garden Salad, Greek Salad, Antipasto, Baked Ziti,
+                                Meatball Parm, or Chicken Parm.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button id="ldp" type="button" class="btn btn-sm btn-outline-secondary">Add to
+                                        Cart</button>
+                                </div>
+                                <small class="text-muted">$70.00</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="featurette-divider">
+            <footer class="container">
+                <p class="float-right"><a href="#">Back to top</a></p>
+                <p>&copy; 2017-2019 Pinnochio’s, Inc. &middot; <a id="priv" href="#">Privacy</a> &middot; <a id="term"
+                        href="#">Terms</a> &middot; <a id="copy" href="#">Copyright</a></p>
+            </footer>
+        </div>
+
+
+
+
+</body>
+
+</html>
