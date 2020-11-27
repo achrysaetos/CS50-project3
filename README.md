@@ -1,4 +1,4 @@
 # Project 3
-using Django, Testing and CI/CD
+Simple web app for restaurants, using Django with CI/CD.
 
-run "python3 manage.py runserver"
+**To start:** run `python3 manage.py runserver`
